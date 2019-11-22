@@ -1,0 +1,23 @@
+{
+  "name": "html-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync -w -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhii-P/html-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serhii-P/html-template/issues"
+  },
+  "homepage": "https://github.com/Serhii-P/html-template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
