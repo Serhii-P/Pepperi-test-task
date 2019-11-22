@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "react-scripts build",
     "start": "browser-sync -w -s",
     "deploy": "gh-pages -d build"
   },
