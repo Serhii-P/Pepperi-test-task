@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Test</h1>
+            <input type="text" name="inputField" placeholder="Write your text here..." id="textField" class="textField">
+            <div class="error" id="emailErr"></div>
+            <ul id="list" class="list"></ul>  
+        </div>
+
+        <div class="control-buttons">
+            <button class="addBtn btn" onclick="newElement()">Add</button>
+            <button class="clearBtn btn" onclick="clearElements()">Delete</button>
+            <button class="btn" onclick="sortListName()">Sort by Name</button>
+            <button class="btn" onclick="sortListValue()">Sort by Value</button>
+            <button class="parseBtn btn" onclick="parseElements()">Show XML</button>
+        </div>
+    </div> 
     
     <script src="main.js"></script>
 </body>
