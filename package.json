@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "react-scripts build",
-    "start": "browser-sync -w -s",
+    "start": "node server.js",
     "deploy": "gh-pages -d build"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Serhii-P/html-template#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "@mate-academy/browsersync-config": "*"
   }
 }

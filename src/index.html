@@ -8,20 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="title">Test</h1>
     <div class="wrapper">
         <div class="header">
-            <h1>Test</h1>
-            <input type="text" name="inputField" placeholder="Write your text here..." id="textField" class="textField">
+            <label class="input-label" for="textField">Name=Value</label>
+            <input 
+                type="text" 
+                name="inputField" 
+                placeholder="Write your text here..." 
+                id="textField" 
+                class="textField" 
+                tabindex="1"
+                onkeydown = "if (event.keyCode == 13)
+                document.getElementById('addNewElement').click()" 
+            >
             <div class="error" id="emailErr"></div>
-            <ul id="list" class="list"></ul>  
+            <button class="addBtn btn" id="addNewElement" onclick="newElement()" tabindex="2">Add</button>
         </div>
 
-        <div class="control-buttons">
-            <button class="addBtn btn" onclick="newElement()">Add</button>
-            <button class="clearBtn btn" onclick="clearElements()">Delete</button>
-            <button class="btn" onclick="sortListName()">Sort by Name</button>
-            <button class="btn" onclick="sortListValue()">Sort by Value</button>
-            <button class="parseBtn btn" onclick="parseElements()">Show XML</button>
+        <div class="main">
+            <label class="main-label" for="list">Name=Value</label>
+            <ul id="list" class="list"></ul> 
+            <div class="control-buttons">
+                <button class="clearBtn btn" onclick="clearElements()" tabindex="3">Delete</button>
+                <button class="sortNameBtn btn" onclick="sortListName()" tabindex="4">Sort by Name</button>
+                <button class="sortValueBtn btn" onclick="sortListValue()" tabindex="5">Sort by Value</button>
+            </div>
+        </div>
+
+        <div class="xmlResult">
+            <textarea id="xmlOutput" placeholder="XML result..."></textarea> 
+            <button class="parseBtn btn" onclick="parseElements()" tabindex="6">Show XML</button>
         </div>
     </div> 
     

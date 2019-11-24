@@ -30,17 +30,23 @@ function newElement() {
   
   function parseElements() {
     const myList = document.getElementById('list');
+    const xmlOutput = document.getElementById('xmlOutput');
     const serializer = new XMLSerializer(); 
     const xmlString = serializer.serializeToString(myList);
   
-    myList.innerHTML = xmlString;
+    xmlOutput.value = xmlString;
     
-    alert(xmlString);
+    
+    // console.log(`${xmlString}`);
   }
   
   function clearElements() {
     const ul = document.getElementById('list');
+    const xmlOutput = document.getElementById('xmlOutput');
+      
+      xmlOutput.value = "";
       ul.innerHTML = "";
+
       localStorage.removeItem('list-wrapper', ul.innerHTML);
   }
   
